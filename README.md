@@ -1,2 +1,3 @@
-# Lithium
-An imperative programming language
+# GPLexer
+
+A general purpose lexer
