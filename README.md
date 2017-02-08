@@ -12,7 +12,7 @@ Following is a list of its tokens:
 
 	1. Keywords: boolean, true, false, if, else, while, double, do, func, for, float, char, int, return, void, break, continue
   
-	2. Operators: &, &&, |, ||, !, !=, =, ==, ^, ~, >, >>, >=, <, <<, <=, :, ?, *, \**, %, /, +, ++, -, --
+	2. Operators: &, &&, |, ||, !, !=, =, ==, ^, ~, >, >>, >=, <, <<, <=, :, ?, *, **, %, /, +, ++, -, --
   
 	3. Delimiters: ',', {, }, (, ), ;, [, ]
   
