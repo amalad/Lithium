@@ -1,4 +1,3 @@
-
 #include "DFA.c"
 #include <string.h>
 #include <stdio.h>
