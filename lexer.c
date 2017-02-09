@@ -1,21 +1,3 @@
-/**
- *	This is a general purpose lexer. 
- *	It takes the lexer rules as input from a file that has to be specified by the user. 
- *	The name of the code file is also taken as input from the user. 
- *	The lexer rules file should be in the following format:
- *		t (number of tokens)
- *		The next t lines contain the names of the tokens
- *		k (number of keywords)
- *		The next k lines contain the names of the keywords
- *		n (number of states in the DFA)
- *		f (number of final states)
- *		The next 2*f lines contain the state number and the corresponding token number, each on a separate line
- *		tr (number of transitions)
- *		The next 3*t lines contain the 'from' state, the 'to' state and the characters on which the transition
- *				has to be made, each on a separate line
- *		The characters indicating the beginning and end of a comment
- *		The token number of identifiers
-*/
 
 #include "DFA.c"
 #include <string.h>
