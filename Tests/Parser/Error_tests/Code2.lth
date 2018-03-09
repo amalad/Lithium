@@ -1,0 +1,25 @@
+#This code is perfectly fine. Should give no errors#
+
+func fact(r)
+{
+	return r*fact(r-1);
+}
+
+func fib(n)#function#
+{
+	if (n==1)
+	{
+		return 1;
+	}
+	else
+	{
+		if(n==2)
+		{
+			d = a***b;
+		}
+		else
+		{
+			return fib(n-1) + fib(n-2);
+		}
+	}
+}

@@ -1,0 +1,99 @@
+S'-> Program
+Program -> Function_statements
+Function_statements -> Function_statement Function_statements
+Function_statements -> ''
+Expression_statement -> Expression ;
+Break_statement -> break ;
+Continue_statement -> continue ;
+Return_statement -> return Expression ;
+If_statement -> if ( Conditional_expression ) Block If_rest
+If_rest -> else Block
+If_rest -> ''
+For_statement -> for ( Expression_list ; For_condition ; Expression_list ) Block
+For_condition -> Conditional_expression
+For_condition -> ''
+While_statement -> while ( For_condition ) Block
+Do_while_statement -> do Block while ( For_condition ) ;
+Function_statement -> func identifier ( Identifier_list ) Block
+Identifier_list -> Identifier_list1
+Identifier_list -> ''
+Identifier_list1 -> Identifier_list1 , identifier
+Identifier_list1 -> identifier
+Block -> { Statements }
+Statements -> Statement Statements
+Statements -> ''
+Statement -> Expression_statement
+Statement -> Break_statement
+Statement -> Continue_statement
+Statement -> Return_statement
+Statement -> If_statement
+Statement -> For_statement
+Statement -> While_statement
+Statement -> Do_while_statement
+Statement -> Function_statement
+Expression -> Assignment_expression
+Expression -> Expression , Assignment_expression
+Assignment_expression -> Conditional_expression
+Assignment_expression -> identifier = Assignment_expression
+Conditional_expression -> Or_expression
+Conditional_expression -> Or_expression ? Expression : Expression
+Or_expression -> And_expression
+Or_expression -> Or_expression || And_expression
+And_expression -> And_expression && Not_expression
+And_expression -> Not_expression
+Not_expression -> ! Or_expression
+Not_expression -> Relational_expression
+Relational_expression -> Bitwise_expression Relational_rest
+Relational_rest -> Relational_op Bitwise_expression
+Relational_rest -> ''
+Relational_op -> !=
+Relational_op -> ==
+Relational_op -> <
+Relational_op -> <=
+Relational_op -> >
+Relational_op -> >=
+Bitwise_expression -> Arithmetic_expression
+Bitwise_expression -> Bitwise_expression Bitwise_op Arithmetic_expression
+Bitwise_op -> <<
+Bitwise_op -> >>
+Bitwise_op -> ^
+Bitwise_op -> &
+Bitwise_op -> |
+Arithmetic_expression -> Multiplicative_expression
+Arithmetic_expression -> Arithmetic_expression + Multiplicative_expression
+Arithmetic_expression -> Arithmetic_expression - Multiplicative_expression
+Multiplicative_expression -> Power
+Multiplicative_expression -> Multiplicative_expression * Power
+Multiplicative_expression -> Multiplicative_expression / Power
+Multiplicative_expression -> Multiplicative_expression % Power
+Power -> Cast_expression
+Power -> Power ** Cast_expression
+Cast_expression -> Unary_expression
+Cast_expression -> ( Type ) Cast_expression
+Type -> int
+Type -> float
+Type -> char
+Type -> double
+Type -> boolean
+Unary_expression -> Postfix_expression
+Unary_expression -> ++ Unary_expression
+Unary_expression -> - Unary_expression
+Unary_expression -> + Unary_expression
+Unary_expression -> -- Unary_expression
+Unary_expression -> ~ Unary_expression
+Postfix_expression -> Primary_expression
+Postfix_expression -> Postfix_expression [ Bitwise_expression ]
+Postfix_expression -> Postfix_expression ( Expression_list )
+Postfix_expression -> Postfix_expression ++
+Postfix_expression -> Postfix_expression --
+Expression_list -> Expression
+Expression_list -> '' 
+Primary_expression -> identifier
+Primary_expression -> Literals
+Primary_expression -> ( Expression )
+Literals -> int_literal
+Literals -> float_literal
+Literals -> char_literal
+Literals -> string_literal
+Literals -> true
+Literals -> false

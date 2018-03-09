@@ -1,0 +1,30 @@
+Token_list.txt:
+
+<Token_num_in_table> <Token_name>
+56 rows, including the $ token. Make sure you append $ after the token list thrown out by the parser.
+
+NT_list.txt:
+
+<Non-terminal_num_in_table> <Non-Terminal_name>
+40 rows, one for each non-terminal
+
+
+ShiftTable.txt:
+
+Row-wise flattening of a 164(states)x56(tokens/terminals) matrix.
+-1 means no shift operation there
+a number greater than or equal to 0 means s'x' where x is the number.
+
+
+ReduceTable.txt:
+
+Row-wise flattening of a 164(states)x56(tokens/terminals) matrix.
+-1 means no reduce operation there
+a number greater than or equal to 0 means r'x' where x is the number.
+
+
+GotoTable.txt:
+
+Row-wise flattening of a 164(states)x40(non-terminals) matrix.
+-1 means no goto defined there
+a number greater than or equal to 0 means goto defined to that number.

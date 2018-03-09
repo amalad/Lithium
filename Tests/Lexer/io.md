@@ -1,6 +1,10 @@
-Test 1:
+# Tests
 
+## Test 1
 
+### Input:
+Code1.lth
+```
 #This is a comment
 meant to be ignored#
 
@@ -16,11 +20,10 @@ func int multiply(int a, int b)
 print(multiply(12, 17));
 print(ab@1234); #Should give an error since @ is not allowed#
 #More comments but not stopped. Should give an error.
+```
 
-
-
-Output 1:
-
+### Output:
+```
 Enter rules file: Lithium.lex
 Generating lexer from file...
 Lexer generated.
@@ -66,15 +69,13 @@ Token 17, string 1234, line number 13
 Token 30, string ), line number 13
 Token 31, string ;, line number 13
 Comment not ended properly, line number 14
+```
 
+## Test 2
 
-
-
-
-
-
-Test 2:
-
+### Input:
+Code2.lth
+```
 #This code is perfectly fine. Should give no errors#
 
 func int fact(int r)
@@ -98,11 +99,10 @@ while(1)
 {
 	print ("Infinite loop");
 } #Note: print will come out as an identifier since it is a function name#
+```
 
-
-
-Output 2:
-
+### Output:
+```
 Enter rules file: Lithium.lex
 Generating lexer from file...
 Lexer generated.
@@ -192,14 +192,13 @@ Token 20, string "Infinite loop", line number 22
 Token 30, string ), line number 22
 Token 31, string ;, line number 22
 Token 28, string }, line number 23
+```
 
+## Test 3
 
-
-
-
-Test 3:
-
-
+### Input:
+Code3.lth
+```
 #Comments #
 
 func avg(int a[], int n)
@@ -217,11 +216,10 @@ int \arr[]={1,2,3,4,5,6,7}; #Should raise an error for \#
 print(avg(arr));
 
 print("Have a nice day!!!!");
+```
 
-
-
-Output 3:
-
+### Output:
+```
 Enter rules file: Lithium.lex
 Generating lexer from file...
 Lexer generated.
@@ -315,5 +313,4 @@ Token 29, string (, line number 17
 Token 20, string "Have a nice day!!!!", line number 17
 Token 30, string ), line number 17
 Token 31, string ;, line number 17
-
-
+```

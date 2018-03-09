@@ -1,0 +1,19 @@
+#Comments #
+
+func avg(a, n)
+{
+	i;
+	sum=0;
+	for(i=0; i<n; i++)
+	{
+		sum=sum+a[i];
+	}
+	if(a==b)
+	{
+		i = 3;
+		a = b * c +3
+	}
+	return sum/(float)n;
+}
+
+

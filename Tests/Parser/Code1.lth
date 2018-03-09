@@ -1,0 +1,10 @@
+#This is a comment
+meant to be ignored#
+
+#func is used to declare a function#
+
+func multiply(a, b)
+{
+    c=a*b;
+}
+#Should give an error since @ is not allowed#
